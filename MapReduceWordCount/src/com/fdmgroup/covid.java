@@ -88,6 +88,7 @@ public class covid {
 		FileOutputFormat.setOutputPath(conf2, new Path(args[2]));
 		
 		JobClient.runJob(conf2);
+		//By Ali
 	}
 
 }
