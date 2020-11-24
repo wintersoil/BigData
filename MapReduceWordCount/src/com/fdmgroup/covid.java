@@ -90,10 +90,10 @@ public class covid {
 		JobClient.runJob(conf2);
 	}
 	
-	// On this data set:
-	// https://www.kaggle.com/divyansh22/toronto-covid19-cases
+		// On this data set:
+		// https://www.kaggle.com/divyansh22/toronto-covid19-cases
 
-	// Results:
-	// https://i.ibb.co/9nQB4d1/screenshot.png
+		// Results:
+		// https://i.ibb.co/9nQB4d1/screenshot.png
 
 }
