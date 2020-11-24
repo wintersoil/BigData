@@ -39,9 +39,7 @@ public class covid {
 			//	output.collect(new Text(params[3]+ " : " + params[4]), new IntWritable(1)); // Neighborhood, FPA
 			//	output.collect(new Text(params[3]+ " : " + params[4] + " >> "+ params[10]), new IntWritable(1)); // Neighborhood, FPA , Gender;
 			//	output.collect(new Text(params[10]), new IntWritable(1)); // Fatal, Resolved, Active 
-			//	output.collect(new Text(params[9]), new IntWritable(1)); // Male, Female, Other
 				output.collect(new Text(params[9] + " with status => " + params[10]), new IntWritable(1)); // Male, Female, Other and their status
-
 		}
 	}
 	
@@ -90,12 +88,6 @@ public class covid {
 		FileOutputFormat.setOutputPath(conf2, new Path(args[2]));
 		
 		JobClient.runJob(conf2);
-		//By Ali Usmani
 	}
-	// On this data set:
-	// https://www.kaggle.com/divyansh22/toronto-covid19-cases
-
-	// Results:
-	// https://i.ibb.co/9nQB4d1/screenshot.png
 
 }
