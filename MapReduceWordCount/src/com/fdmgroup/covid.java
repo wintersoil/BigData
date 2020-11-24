@@ -38,8 +38,8 @@ public class covid {
 				String[] params = beg.split(",");
 			//	output.collect(new Text(params[3]+ " : " + params[4]), new IntWritable(1)); // Neighborhood, FPA
 			//	output.collect(new Text(params[3]+ " : " + params[4] + " >> "+ params[10]), new IntWritable(1)); // Neighborhood, FPA , Gender;
-			//	output.collect(new Text(params[10]), new IntWritable(1)); // Fatal, Resolved, Active 
-				output.collect(new Text(params[9] + " with status => " + params[10]), new IntWritable(1)); // Male, Female, Other and their status
+				output.collect(new Text(params[10]), new IntWritable(1)); // Fatal, Resolved, Active 
+			//	output.collect(new Text(params[9] + " with status => " + params[10]), new IntWritable(1)); // Male, Female, Other and their status
 		}
 	}
 	
