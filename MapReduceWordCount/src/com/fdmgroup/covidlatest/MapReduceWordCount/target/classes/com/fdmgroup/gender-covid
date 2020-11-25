@@ -1,8 +1,0 @@
-output.collect(new Text(params[9] + " with status => " + params[10]), new IntWritable(1)); // Male, Female, Other and their status
-
-
-6	, , OTHER
-7	, , TRANSGENDER
-242	, , UNKNOWN
-6747	, , MALE
-7909	, , FEMALE

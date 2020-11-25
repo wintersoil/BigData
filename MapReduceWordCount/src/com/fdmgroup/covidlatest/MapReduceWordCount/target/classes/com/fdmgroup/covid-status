@@ -1,7 +1,0 @@
-output.collect(new Text(params[10]), new IntWritable(1)); // Fatal, Resolved, Active 
-
-
-1	, , Outcome
-595	, , ACTIVE
-1121	, , FATAL
-13195	, , RESOLVED
