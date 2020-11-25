@@ -1,0 +1,78 @@
+------------------------------------------------------
+Gender Stats COVID
+---------------------------
+18	, , GENDER DIVERSE
+581	, , UNSPECIFIED
+51598	, , MALE
+54313	, , FEMALE
+
+
+------------------------------------------------------
+Outcome of COVID in Ontario
+---------------------------
+3519	, , Fatal
+12917	, , Not Resolved
+90074	, , Resolved
+
+------------------------------------------------------
+City impacted by COVID in Ontario
+---------------------------
+19	, , New Liskeard
+58	, , Sault Ste. Marie
+63	, , North Bay
+106	, , Kenora, , Timmins
+109	, , Belleville
+128	, , Pembroke
+195	, , Peterborough
+221	, , Sudbury
+232	, , Kingston
+235	, , Thunder Bay
+274	, , Owen Sound
+283	, , Stratford
+288	, , Port Hope
+404	, , Point Edward
+480	, , Brockville, Chatham
+500	, , St. Thomas
+544	, , Brantford
+606	, , Simcoe
+780	, , Cornwall
+1233	, , Guelph
+1478	, , London
+1942	, , Barrie
+2014	, , Thorold
+2757	, , Hamilton
+3112	, , Waterloo
+3153	, , Oakville
+3352	, , Windsor
+4074	, , Whitby
+8229	, , Ottawa
+9796	, , Newmarket
+22476	, , Mississauga
+36783	, , Toronto
+
+
+------------------------------------------------------
+Age groups of COVID patients in Ontario
+---------------------------
+6	, , UNKNOWN
+8	, , 
+3701	, , 90s
+5559	, , 70s
+5613	, , 80s
+10026	, , 60s
+12544	, , <20
+14830	, , 40s
+15533	, , 50s
+16483	, , 30s
+22207	, , 20s
+
+------------------------------------------------------
+Acquisition of COVID cases in Ontario
+---------------------------
+191	, , Unspecified epi link
+2691	, , Missing Information
+3201	, , Travel
+24022	, , OB
+33774	, , No known epi link
+42631	, , CC
+
