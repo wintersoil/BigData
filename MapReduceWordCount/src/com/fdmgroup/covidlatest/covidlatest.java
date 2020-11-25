@@ -49,7 +49,7 @@ public class covidlatest {
 						beg = beg.substring(0, beg.indexOf("\"")) + s1 + beg.substring(beg.indexOf("\"") + lengthy + 2);
 					}
 					String[] params = beg.split(",");
-					output.collect(new Text(params[13]), new IntWritable(1)); // Gender count
+					output.collect(new Text(params[7]), new IntWritable(1)); // Gender count
 				}
 		}
 		

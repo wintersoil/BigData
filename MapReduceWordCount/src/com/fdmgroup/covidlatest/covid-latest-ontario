@@ -49,3 +49,30 @@ City impacted by COVID in Ontario
 9796	, , Newmarket
 22476	, , Mississauga
 36783	, , Toronto
+
+
+------------------------------------------------------
+Age groups of COVID patients in Ontario
+---------------------------
+6	, , UNKNOWN
+8	, , 
+3701	, , 90s
+5559	, , 70s
+5613	, , 80s
+10026	, , 60s
+12544	, , <20
+14830	, , 40s
+15533	, , 50s
+16483	, , 30s
+22207	, , 20s
+
+------------------------------------------------------
+Acquisition of COVID cases in Ontario
+---------------------------
+191	, , Unspecified epi link
+2691	, , Missing Information
+3201	, , Travel
+24022	, , OB
+33774	, , No known epi link
+42631	, , CC
+
