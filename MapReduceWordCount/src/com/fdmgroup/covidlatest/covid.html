@@ -1,0 +1,269 @@
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+  background-color: #111;
+  font-family: "Montserrat";
+  font-weight: 300;
+  height: 100vh;
+  width: 100vw;
+}
+.title-container{
+  display: flex;
+  justify-content: center;
+}
+.title{
+  font-size: 40px;
+  color: #009fdf;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgb(60, 100, 100);
+}
+.gender-classification {
+  color: #009fdf;
+  font-size: 22px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 2px 4px 5px #000;
+  width: 490px;
+  background-color: rgb(27,27,27);
+}
+.gender-container {
+  margin-bottom: 15px;
+}
+.location-classification {
+  color: #009fdf;
+  font-size: 22px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 2px 4px 5px #000;
+  width: 490px;
+  background-color: rgb(27,27,27);
+      height: 560px;
+    overflow: scroll;
+}
+.location-container {
+    margin-bottom: 15px;
+    position: absolute;
+    top: 75px;
+    right: 10px;
+}
+.age-cluster-classification {
+  color: #009fdf;
+  font-size: 22px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 2px 4px 5px #000;
+  width: 400px;
+  background-color: rgb(27,27,27);
+  height: 285px;
+  overflow: scroll;
+}
+.age-cluster-container {
+    margin-bottom: 15px;
+    position: absolute;
+    top:350px;
+    left: 36%;
+
+}
+.central-image {
+  position: absolute;
+  top: 12%;
+  left: 35%;
+  z-index:-1;
+  display: flex;
+  justify-content: center;
+}
+.gender-individual {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 0.1fr;
+  padding: 4px 12px;
+  border-bottom: 1px solid #333;
+}
+.gender-individual:last-child{
+   border-bottom: 0px solid #333;
+}
+.location-individual {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 0.8fr;
+  padding: 4px 12px;
+  border-bottom: 1px solid #333;
+}
+.location-individual:last-child{
+   border-bottom: 0px solid #333;
+}
+.gender-container {
+  display: flex;
+}
+.gender-item {
+  border-right: 1px solid #222;
+  padding: 2px 20px;
+}
+.gender-item:last-child {
+  border-right: 0px solid #222;
+}
+.province {
+}
+.headings {
+  display: flex;
+  justify-content:center;
+  text-align: center;
+  font-size: 28px;
+  border-bottom: 2px solid #333;
+}
+.hadoop-logo {
+  position: absolute;
+  top: 65%;
+  left: 3%;
+}
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <script>
+        let places =
+    "19	, , New Liskeard<>58	, , Sault Ste. Marie<>63	, , North Bay<>106	, , Kenora, , Timmins<>109	, , Belleville<>128	, , Pembroke<>195	, , Peterborough<>221	, , Sudbury<>232	, , Kingston<>235	, , Thunder Bay<>274	, , Owen Sound<>283	, , Stratford<>288	, , Port Hope<>404	, , Point Edward<>480	, , Brockville, Chatham<>500	, , St. Thomas<>544	, , Brantford<>606	, , Simcoe<>780	, , Cornwall<>1233	, , Guelph<>1478	, , London<>1942	, , Barrie<>2014	, , Thorold<>2757	, , Hamilton<>3112	, , Waterloo<>3153	, , Oakville<>3352	, , Windsor<>4074	, , Whitby<>8229	, , Ottawa<>9796	, , Newmarket<>22476	, , Mississauga<>36783	, , Toronto";
+
+let age = "6	, , UNKNOWN<>3701	, , 90s<>5559	, , 70s<>5613	, , 80s<>10026	, , 60s<>12544	, , <20<>14830	, , 40s<>15533	, , 50s<>16483	, , 30s<>22207	, , 20s"
+
+$(document).ready(function(){
+  let placesArray = places.split("<>");
+  let agesArray = age.split("<>");
+  let html1 = "";
+  let total = 0;
+  for(let i = 0; i < placesArray.length; i++)
+    {
+      let separations = placesArray[i].split("	, , ");
+      let number = parseInt(separations[0]);
+      total += number;
+    }
+
+  for(let i = 0; i < placesArray.length; i++)
+    {
+      let separations = placesArray[i].split("	, , ");
+      let number = separations[0];
+      let city = separations[1];
+      html1 += "<div class='location-individual'><div class='gender-item'>"+ city +"</div><div class='gender-item'>" + number + "</div><div class='gender-item'>"+ ("" + (number*100/total)).substring(0,6) +" %</div></div>"
+    }
+  $(".location-classification").append(html1);
+  let html2 ="";
+  for(let i = 0; i < agesArray.length; i++)
+    {
+      let separations1 = agesArray[i].split("	, , ");
+      let number1 = separations1[0];
+      let city1 = separations1[1];
+      console.log(number1);
+      html2 += "<div class='location-individual'><div class='gender-item'>"+ city1 +"</div><div class='gender-item'>" + number1 + "</div><div class='gender-item'></div></div>"
+    }
+  $(".age-cluster-classification").append(html2);
+})
+    </script>
+</head>
+<body>
+<div class="title-container">
+    <div class="title">
+        Ontario COVID 19 Stats
+    </div>
+</div>
+<div class="gender-container">
+    <div class="gender-classification">
+        <div class="headings">Gender Analysis</div>
+        <div class="gender-individual">
+            <div class="gender-item">
+                GENDER DIVERSE
+            </div>
+            <div class="gender-item">
+                18
+            </div>
+            <div class="gender-item">0.02%</div>
+        </div>
+        <div class="gender-individual">
+            <div class="gender-item">
+                UNSPECIFIED
+            </div>
+            <div class="gender-item">
+                581
+            </div>
+            <div class="gender-item">0.55%</div>
+        </div>
+        <div class="gender-individual">
+            <div class="gender-item">
+                MALE
+            </div>
+            <div class="gender-item">
+                51598
+            </div>
+            <div class="gender-item">48.4%</div>
+        </div>
+        <div class="gender-individual">
+            <div class="gender-item">FEMALE</div>
+            <div class="gender-item">54313</div>
+            <div class="gender-item">50.9%</div>
+        </div>
+    </div>
+</div>
+<div class="gender-container">
+    <div class="gender-classification">
+        <div class="headings">Outcome Analysis</div>
+        <div class="gender-individual">
+            <div class="gender-item">
+                Resolved
+            </div>
+            <div class="gender-item">
+                90074
+            </div>
+            <div class="gender-item">84.6%</div>
+        </div>
+        <div class="gender-individual">
+            <div class="gender-item">
+                Not Resolved
+            </div>
+            <div class="gender-item">
+                12917
+            </div>
+            <div class="gender-item">1.42%</div>
+        </div>
+        <div class="gender-individual">
+            <div class="gender-item">
+                Fatal
+            </div>
+            <div class="gender-item">
+                3519
+            </div>
+            <div class="gender-item">0.39%</div>
+        </div>
+    </div>
+</div>
+
+<div class="location-container">
+    <div class="location-classification">
+        <div class="headings">Location Analysis</div>
+
+    </div>
+</div>
+
+<div class="age-cluster-container">
+    <div class="age-cluster-classification">
+        <div class="headings">Age Analysis</div>
+
+    </div>
+</div>
+
+
+<div class="central-image">
+    <img src="https://i.ibb.co/kyDb87Y/ontario1.png"height="265px" class="province"/>
+</div>
+<div class="hadoop-logo">
+    <img src="https://blog.min.io/content/images/2019/08/hadoop-logo.png" width="400px">
+</div>
+</body>
+</html>
